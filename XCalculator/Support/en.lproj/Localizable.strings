@@ -1,0 +1,41 @@
+"title.menu" = "Calculator";
+"topic1" = "Forex Drawdown";
+"topic2" = "Risk of Ruin";
+"topic3" = "Fibonacci";
+"topic4" = "Pivot Point";
+
+"start.balance.1" = "Starting balance";
+"loss.1" = "Consecutive losses";
+"precent.1" = "Loss % per trade";
+"end.1" = "Ending balance";
+"total.1" = "Total Loss";
+"calc.btn" = "Calculate";
+
+"win.2" = "Win rate %";
+"average.2" = "Average profit / loss";
+"risk.2" = "Risk per trade %";
+"numbers.2" = "Number of trades";
+"max.2" = "Max dropdown %";
+"risk.drop.2" = "Risk of peak-to-valley dropdown";
+
+"title.3" = "Fibonacci Calculator";
+"control1" = "Retracement";
+"control2" = "Projiction";
+"trend.3" = "Trend direction";
+"up" = "Up";
+"down" = "Down";
+"low" = "Low price";
+"high" = "High price";
+"level" = "Level";
+"price" = "Price";
+
+"standart" = "Standart";
+"woodie" = "Woodie";
+"camarilla" = "Camarilla";
+"demark" = "Demark";
+"resistance" = "Resistance";
+"support" = "Support";
+
+"settings" = "Settings";
+"privacy" = "Privacy Policy";
+"terms" = "Terms of use";

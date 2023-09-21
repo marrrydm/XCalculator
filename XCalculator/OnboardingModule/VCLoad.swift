@@ -8,6 +8,12 @@ final class VCLoad: UIViewController {
         view.backgroundColor = UIColor(red: 0.22, green: 0.22, blue: 0.251, alpha: 1)
 
         setupUI()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [self] in
+            let vc = MenuController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
+        })
     }
 }
 
