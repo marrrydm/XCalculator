@@ -36,7 +36,7 @@ final class MenuController: UIViewController {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.168, green: 0.168, blue: 0.188, alpha: 1)
         view.layer.cornerRadius = 18
-        view.tag = 1
+        view.tag = 2
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
         view.isUserInteractionEnabled = true
 
@@ -47,7 +47,7 @@ final class MenuController: UIViewController {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.168, green: 0.168, blue: 0.188, alpha: 1)
         view.layer.cornerRadius = 18
-        view.tag = 1
+        view.tag = 3
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
         view.isUserInteractionEnabled = true
 
@@ -58,7 +58,7 @@ final class MenuController: UIViewController {
         let view = UIView()
         view.backgroundColor = UIColor(red: 0.168, green: 0.168, blue: 0.188, alpha: 1)
         view.layer.cornerRadius = 18
-        view.tag = 1
+        view.tag = 4
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap)))
         view.isUserInteractionEnabled = true
 
@@ -267,8 +267,14 @@ private extension MenuController {
 
     @objc func tap(sender: UITapGestureRecognizer) {
         switch sender.view?.tag {
-        case 1: break
-        case 2: break
+        case 1:
+            let vc = DrawController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
+        case 2:
+            let vc = RiskController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
         case 3: break
         case 4: break
         default: break
