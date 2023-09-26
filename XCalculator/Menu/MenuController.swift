@@ -275,7 +275,10 @@ private extension MenuController {
             let vc = RiskController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: false)
-        case 3: break
+        case 3:
+            let vc = FibonacciController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
         case 4: break
         default: break
         }

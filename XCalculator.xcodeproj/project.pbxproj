@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		33420CCEABE46C15D04D9C3C /* Pods_XCalculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7C651E96A7746B90B09FD8 /* Pods_XCalculator.framework */; };
 		F87938C72AC1C3460000890A /* RiskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87938C62AC1C3460000890A /* RiskController.swift */; };
+		F87938C92AC2BCC90000890A /* FibonacciController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87938C82AC2BCC90000890A /* FibonacciController.swift */; };
 		F8F4C45D2ABC419C00321A6B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8F4C45F2ABC419C00321A6B /* Localizable.strings */; };
 		F8F4C4622ABC474400321A6B /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4C4612ABC474400321A6B /* MenuController.swift */; };
 		F8F4C4642ABC479E00321A6B /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F4C4632ABC479E00321A6B /* Extention.swift */; };
@@ -26,6 +27,7 @@
 		3A3E9D2461F512B1F9667EB3 /* Pods-XCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCalculator.debug.xcconfig"; path = "Target Support Files/Pods-XCalculator/Pods-XCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		E77F55403AE72E11F2677832 /* Pods-XCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCalculator.release.xcconfig"; path = "Target Support Files/Pods-XCalculator/Pods-XCalculator.release.xcconfig"; sourceTree = "<group>"; };
 		F87938C62AC1C3460000890A /* RiskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskController.swift; sourceTree = "<group>"; };
+		F87938C82AC2BCC90000890A /* FibonacciController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciController.swift; sourceTree = "<group>"; };
 		F8F4C45E2ABC419C00321A6B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F8F4C4612ABC474400321A6B /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		F8F4C4632ABC479E00321A6B /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				F8F4C4652ABC4CE500321A6B /* SettingController.swift */,
 				F8F4C4672ABC505200321A6B /* DrawdownController.swift */,
 				F87938C62AC1C3460000890A /* RiskController.swift */,
+				F87938C82AC2BCC90000890A /* FibonacciController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			files = (
 				F8F4C4662ABC4CE500321A6B /* SettingController.swift in Sources */,
 				F8F4C4622ABC474400321A6B /* MenuController.swift in Sources */,
+				F87938C92AC2BCC90000890A /* FibonacciController.swift in Sources */,
 				F8FA76A12AB98E7000545E53 /* VCLoad.swift in Sources */,
 				F8FA769D2AB98E7000545E53 /* AppDelegate.swift in Sources */,
 				F87938C72AC1C3460000890A /* RiskController.swift in Sources */,
