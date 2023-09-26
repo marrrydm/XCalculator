@@ -279,7 +279,10 @@ private extension MenuController {
             let vc = FibonacciController()
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: false)
-        case 4: break
+        case 4:
+            let vc = PivotController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: false)
         default: break
         }
     }

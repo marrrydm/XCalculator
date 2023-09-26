@@ -35,6 +35,8 @@
 "demark" = "Demark";
 "resistance" = "Resistance";
 "support" = "Support";
+"Open price" = "Open price";
+"Close price" = "Close price";
 
 "settings" = "Settings";
 "privacy" = "Privacy Policy";
