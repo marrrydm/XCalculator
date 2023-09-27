@@ -79,10 +79,11 @@ final class DrawController: UIViewController {
         view.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
         view.layer.borderWidth = 1
         view.layer.cornerRadius = 10
-        view.placeholder = "0"
+        view.text = "10"
         view.layer.sublayerTransform = CATransform3DMakeTranslation(12, 0, 0)
         view.textColor = .white
         view.keyboardType = .decimalPad
+        view.isUserInteractionEnabled = false
 
         return view
     }()
@@ -126,7 +127,7 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 24, weight: .bold)
         view.textAlignment = .left
-        view.text = "16,341.46"
+        view.text = "---"
 
         return view
     }()
@@ -136,7 +137,7 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 24, weight: .bold)
         view.textAlignment = .left
-        view.text = "18.3%"
+        view.text = "---"
 
         return view
     }()
@@ -293,7 +294,7 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
+        view.text = "---"
 
         return view
     }()
@@ -303,7 +304,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -313,7 +313,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -323,7 +322,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -333,7 +331,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -343,7 +340,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -353,7 +349,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -363,7 +358,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -373,7 +367,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -383,7 +376,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "20.000"
 
         return view
     }()
@@ -393,7 +385,7 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "2%"
+        view.text = "---"
 
         return view
     }()
@@ -403,7 +395,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "3.96%"
 
         return view
     }()
@@ -413,7 +404,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "5.88%"
 
         return view
     }()
@@ -423,7 +413,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "7.76%"
 
         return view
     }()
@@ -433,7 +422,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "9.61%"
 
         return view
     }()
@@ -443,7 +431,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "11.42%"
 
         return view
     }()
@@ -453,7 +440,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "13.19%"
 
         return view
     }()
@@ -463,7 +449,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "14.92%"
 
         return view
     }()
@@ -473,7 +458,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "16.63%"
 
         return view
     }()
@@ -483,7 +467,6 @@ final class DrawController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "18.29%"
 
         return view
     }()
@@ -492,8 +475,8 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
+        view.text = "---"
 
         return view
     }()
@@ -502,8 +485,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -512,8 +494,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -522,8 +503,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -532,8 +512,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -542,8 +521,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -552,8 +530,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -562,8 +539,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -572,8 +548,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -582,8 +557,7 @@ final class DrawController: UIViewController {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
-        view.textAlignment = .left
-        view.text = "19,600"
+        view.textAlignment = .right
 
         return view
     }()
@@ -594,7 +568,7 @@ final class DrawController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
 
         return view
     }()
@@ -605,7 +579,7 @@ final class DrawController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
 
         return view
     }()
@@ -616,7 +590,7 @@ final class DrawController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
 
         return view
     }()
@@ -627,7 +601,7 @@ final class DrawController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
 
         return view
     }()
@@ -644,12 +618,21 @@ final class DrawController: UIViewController {
         return nextButton
     }()
 
+    private var arrayStartBalance = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    private var arrayEndBalance = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    private var arrayTotalLoss = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    private var viewForCalculate = [[UILabel]]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0.218, green: 0.218, blue: 0.25, alpha: 1)
 
         setupUI()
         setupDoneBtn()
+
+        balanceTextField.delegate = self
+        lossTextField.delegate = self
     }
 }
 
@@ -800,7 +783,7 @@ private extension DrawController {
 
         valueEnd1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            valueEnd1.leadingAnchor.constraint(equalTo: title4.leadingAnchor),
+            valueEnd1.trailingAnchor.constraint(equalTo: title4.trailingAnchor),
             valueEnd1.topAnchor.constraint(equalTo: title4.bottomAnchor, constant: 8)
         ])
 
@@ -824,7 +807,7 @@ private extension DrawController {
 
         stackView4.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stackView4.leadingAnchor.constraint(equalTo: title4.leadingAnchor),
+            stackView4.trailingAnchor.constraint(equalTo: title4.trailingAnchor),
             stackView4.topAnchor.constraint(equalTo: valueEnd1.bottomAnchor, constant: 8)
         ])
 
@@ -835,6 +818,16 @@ private extension DrawController {
             calculateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             calculateButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+
+        viewForCalculate = [[valueStart2, valueTotal2, valueEnd2],
+                            [valueStart3, valueTotal3, valueEnd3],
+                            [valueStart4, valueTotal4, valueEnd4],
+                            [valueStart5, valueTotal5, valueEnd5],
+                            [valueStart6, valueTotal6, valueEnd6],
+                            [valueStart7, valueTotal7, valueEnd7],
+                            [valueStart8, valueTotal8, valueEnd8],
+                            [valueStart9, valueTotal9, valueEnd9],
+                            [valueStart10, valueTotal10, valueEnd10]]
     }
 
     func setupDoneBtn() {
@@ -845,20 +838,62 @@ private extension DrawController {
         toolBar.isUserInteractionEnabled = true
         balanceTextField.inputAccessoryView = toolBar
         lossTextField.inputAccessoryView = toolBar
-        consecutiveTextField.inputAccessoryView = toolBar
     }
 
     @objc func hideKeyboard() {
         view.endEditing(true)
+        lossTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        balanceTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
     }
 }
 
 private extension DrawController {
     @objc func calculate() {
-        //
+        // newBalance = startBalance - ((% / 100) * startBalance)
+        // totalLoss = (newBalance * (первоначальный %) / startBalance) + (первоначальный %)
+
+        if balanceTextField.text != "" && lossTextField.text != "" {
+            valueStart1.text = balanceTextField.text
+            valueTotal1.text = lossTextField.text ?? "0" + "%"
+            var newBalance = Double(balanceTextField.text!)! - ((Double(lossTextField.text!)! / 100) * Double(balanceTextField.text!)!)
+            var percent = 0.0
+            var oldPercent = Double(lossTextField.text!)!
+            valueEnd1.text = "\(newBalance)"
+
+            stackView1.isHidden = false
+            stackView2.isHidden = false
+            stackView3.isHidden = false
+            stackView4.isHidden = false
+
+            viewForCalculate.forEach {
+                $0[0].text = String(format:"%.2f", newBalance)
+                percent = (newBalance * (Double(lossTextField.text!)! / Double(balanceTextField.text!)!)) + oldPercent
+                $0[1].text = String(format:"%.2f", percent) + "%"
+                oldPercent = percent
+                newBalance = newBalance - ((Double(lossTextField.text!)! / 100) * newBalance)
+                $0[2].text = String(format:"%.2f", newBalance)
+            }
+
+            endBalanceValue.text = String(format:"%.2f", newBalance)
+            totalValue.text = String(format:"%.2f", percent) + "%"
+        }
     }
 
     @objc func pop() {
         dismiss(animated: false)
+    }
+}
+
+extension DrawController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case balanceTextField:
+            balanceTextField.layer.borderWidth = 1
+            balanceTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+        case lossTextField:
+            lossTextField.layer.borderWidth = 1
+            lossTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+        default: break
+        }
     }
 }
