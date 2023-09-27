@@ -27,6 +27,8 @@
 		2A7C651E96A7746B90B09FD8 /* Pods_XCalculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XCalculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A3E9D2461F512B1F9667EB3 /* Pods-XCalculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCalculator.debug.xcconfig"; path = "Target Support Files/Pods-XCalculator/Pods-XCalculator.debug.xcconfig"; sourceTree = "<group>"; };
 		E77F55403AE72E11F2677832 /* Pods-XCalculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XCalculator.release.xcconfig"; path = "Target Support Files/Pods-XCalculator/Pods-XCalculator.release.xcconfig"; sourceTree = "<group>"; };
+		F82D10492AC4DE0600B98566 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		F82D104A2AC4DE0600B98566 /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F87938C62AC1C3460000890A /* RiskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskController.swift; sourceTree = "<group>"; };
 		F87938C82AC2BCC90000890A /* FibonacciController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciController.swift; sourceTree = "<group>"; };
 		F87938CA2AC2CBD00000890A /* PivotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PivotController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ms,
 			);
 			mainGroup = F8FA76902AB98E7000545E53;
 			productRefGroup = F8FA769A2AB98E7000545E53 /* Products */;
@@ -271,6 +274,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F8F4C45E2ABC419C00321A6B /* en */,
+				F82D104A2AC4DE0600B98566 /* ms */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -279,6 +283,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F8FA76A82AB98E7100545E53 /* Base */,
+				F82D10492AC4DE0600B98566 /* ms */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -290,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -350,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

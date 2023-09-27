@@ -17,6 +17,7 @@
 "numbers.2" = "Number of trades";
 "max.2" = "Max dropdown %";
 "risk.drop.2" = "Risk of peak-to-valley dropdown";
+"Risk of ruin" = "Risk of ruin";
 
 "title.3" = "Fibonacci Calculator";
 "control1" = "Retracement";

@@ -1,0 +1,46 @@
+"title.menu" = "Kalkulator";
+"topic1" = "Pengeluaran Forex";
+"topic2" = "Risiko Kehancuran";
+"topic3" = "Fibonacci";
+"topic4" = "Titik Pangsi";
+
+"start.balance.1" = "Baki permulaan";
+"loss.1" = "Kerugian berturut-turut";
+"precent.1" = "% Kerugian setiap dagangan";
+"end.1" = "Baki akhir";
+"total.1" = "Jumlah Kerugian";
+"calc.btn" = "Kira";
+
+"win.2" = "Kadar kemenangan %";
+"average.2" = "Purata untung / rugi";
+"risk.2" = "Risiko setiap dagangan %";
+"numbers.2" = "Bilangan dagangan";
+"max.2" = "% dropdown maks";
+"risk.drop.2" = "Risiko jatuh turun puncak ke lembah";
+"Risk of ruin" = "Risiko kehancuran";
+
+"title.3" = "Kalkulator Fibonacci";
+"control1" = "Pengesanan Semula";
+"control2" = "Unjuran";
+"trend.3" = "Arah aliran";
+"up" = "Naik";
+"down" = "Bawah";
+"low" = "Harga rendah";
+"high" = "Harga tinggi";
+"level" = "Peringkat";
+"price" = "Harga";
+
+"standart" = "Standard";
+"woodie" = "Woodie";
+"camarilla" = "Camarilla";
+"demark" = "Demark";
+"resistance" = "Rintangan";
+"support" = "Sokongan";
+"Open price" = "Harga terbuka";
+"Close price" = "Harga tutup";
+
+"settings" = "Tetapan";
+"privacy" = "Dasar Privasi";
+"terms" = "Syarat penggunaan";
+
+"Done" = "Selesai";

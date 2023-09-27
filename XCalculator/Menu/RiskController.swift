@@ -163,7 +163,7 @@ final class RiskController: UIViewController {
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
         view.font = .systemFont(ofSize: 14, weight: .regular)
         view.textAlignment = .left
-        view.text = "total.1".localize()
+        view.text = "Risk of ruin".localize()
 
         return view
     }()
