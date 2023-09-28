@@ -31,7 +31,7 @@ final class RiskController: UIViewController {
     private let maxTitle: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "max.2".localize()
 
@@ -55,7 +55,7 @@ final class RiskController: UIViewController {
     private let winLabel: UILabel = {
         let view = UILabel()
         view.textColor =  UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "win.2".localize()
 
@@ -65,7 +65,7 @@ final class RiskController: UIViewController {
     private let averageLabel: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "average.2".localize()
 
@@ -103,7 +103,7 @@ final class RiskController: UIViewController {
     private let riskLabel: UILabel = {
         let view = UILabel()
         view.textColor =  UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "risk.2".localize()
 
@@ -113,7 +113,7 @@ final class RiskController: UIViewController {
     private let numLabel: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "numbers.2".localize()
 
@@ -151,7 +151,7 @@ final class RiskController: UIViewController {
     private let riskBalanceTitle: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "risk.drop.2".localize()
 
@@ -161,7 +161,7 @@ final class RiskController: UIViewController {
     private let totalTitle: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "Risk of ruin".localize()
 
@@ -171,7 +171,7 @@ final class RiskController: UIViewController {
     private let riskBalanceValue: UILabel = {
         let view = UILabel()
         view.textColor = .white
-        view.font = .systemFont(ofSize: 24, weight: .bold)
+        view.font = .systemFont(ofSize: 22, weight: .bold)
         view.textAlignment = .left
         view.text = "13.8%"
 
@@ -181,7 +181,7 @@ final class RiskController: UIViewController {
     private let totalValue: UILabel = {
         let view = UILabel()
         view.textColor = .white
-        view.font = .systemFont(ofSize: 24, weight: .bold)
+        view.font = .systemFont(ofSize: 22, weight: .bold)
         view.textAlignment = .left
         view.text = "8.1%"
 

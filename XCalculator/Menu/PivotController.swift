@@ -39,7 +39,7 @@ final class PivotController: UIViewController {
     private let consecutiveLabel: UILabel = {
         let view = UILabel()
         view.textColor =  UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "low".localize()
 
@@ -49,7 +49,7 @@ final class PivotController: UIViewController {
     private let lossLabel: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "high".localize()
 
@@ -87,7 +87,7 @@ final class PivotController: UIViewController {
     private let openLabel: UILabel = {
         let view = UILabel()
         view.textColor =  UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "Open price".localize()
 
@@ -97,7 +97,7 @@ final class PivotController: UIViewController {
     private let closeLabel: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "Close price".localize()
 
@@ -148,6 +148,16 @@ final class PivotController: UIViewController {
         view.font = .systemFont(ofSize: 11, weight: .regular)
         view.textAlignment = .left
         view.text = "price".localize()
+
+        return view
+    }()
+
+    private let valueNum0: UILabel = {
+        let view = UILabel()
+        view.textColor = .white
+        view.font = .systemFont(ofSize: 13, weight: .regular)
+        view.textAlignment = .left
+        view.text = "---"
 
         return view
     }()
@@ -222,12 +232,21 @@ final class PivotController: UIViewController {
         return view
     }()
 
+    private let valueNum8: UILabel = {
+        let view = UILabel()
+        view.textColor = .white
+        view.font = .systemFont(ofSize: 13, weight: .regular)
+        view.textAlignment = .left
+        view.text = "support".localize() + " 4"
+
+        return view
+    }()
+
     private let valueEnd1: UILabel = {
         let view = UILabel()
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -237,7 +256,6 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -247,7 +265,6 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -257,7 +274,6 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -267,7 +283,6 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -277,7 +292,6 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
 
         return view
     }()
@@ -287,7 +301,24 @@ final class PivotController: UIViewController {
         view.textColor = .white
         view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
-        view.text = "19,600"
+
+        return view
+    }()
+
+    private let valueEnd8: UILabel = {
+        let view = UILabel()
+        view.textColor = .white
+        view.font = .systemFont(ofSize: 13, weight: .regular)
+        view.textAlignment = .left
+
+        return view
+    }()
+
+    private let valueEnd9: UILabel = {
+        let view = UILabel()
+        view.textColor = .white
+        view.font = .systemFont(ofSize: 13, weight: .regular)
+        view.textAlignment = .left
 
         return view
     }()
@@ -298,7 +329,8 @@ final class PivotController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
+        view.semanticContentAttribute = .forceLeftToRight
 
         return view
     }()
@@ -309,7 +341,8 @@ final class PivotController: UIViewController {
         view.distribution  = .fillEqually
         view.alignment = .leading
         view.spacing = 6
-//        view.isHidden = true
+        view.isHidden = true
+        view.semanticContentAttribute = .forceRightToLeft
 
         return view
     }()
@@ -332,6 +365,11 @@ final class PivotController: UIViewController {
 
         setupUI()
         setupDoneBtn()
+
+        openTextField.delegate = self
+        closeTextField.delegate = self
+        lossTextField.delegate = self
+        consecutiveTextField.delegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -342,10 +380,10 @@ final class PivotController: UIViewController {
 
 private extension PivotController {
     func setupUI() {
-        view.addSubviews(viewBackground, stackView1, stackView4, title1, title4, valueNum1, valueEnd1, calculateButton)
+        view.addSubviews(viewBackground, stackView1, stackView4, title1, title4, valueNum0, valueEnd1, calculateButton)
         viewBackground.addSubviews(labelTitle, imgBack, segmentFirst, consecutiveLabel, consecutiveTextField, lossLabel, lossTextField, openLabel, openTextField, closeLabel, closeTextField)
-        stackView1.addArrangedSubviews(valueNum2, valueNum3, valueNum4, valueNum5, valueNum6, valueNum7)
-        stackView4.addArrangedSubviews(valueEnd2, valueEnd3, valueEnd4, valueEnd5, valueEnd6, valueEnd7)
+        stackView1.addArrangedSubviews(valueNum1, valueNum2, valueNum3, valueNum4, valueNum5, valueNum6, valueNum7, valueNum8)
+        stackView4.addArrangedSubviews(valueEnd2, valueEnd3, valueEnd4, valueEnd5, valueEnd6, valueEnd7, valueEnd8, valueEnd9)
 
         labelTitle.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -442,10 +480,10 @@ private extension PivotController {
             title4.topAnchor.constraint(equalTo: viewBackground.bottomAnchor, constant: 16)
         ])
 
-        valueNum1.translatesAutoresizingMaskIntoConstraints = false
+        valueNum0.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            valueNum1.leadingAnchor.constraint(equalTo: title1.leadingAnchor),
-            valueNum1.topAnchor.constraint(equalTo: title1.bottomAnchor, constant: 8)
+            valueNum0.leadingAnchor.constraint(equalTo: title1.leadingAnchor),
+            valueNum0.topAnchor.constraint(equalTo: title1.bottomAnchor, constant: 8)
         ])
 
         valueEnd1.translatesAutoresizingMaskIntoConstraints = false
@@ -457,7 +495,7 @@ private extension PivotController {
         stackView1.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stackView1.leadingAnchor.constraint(equalTo: title1.leadingAnchor),
-            stackView1.topAnchor.constraint(equalTo: valueNum1.bottomAnchor, constant: 8)
+            stackView1.topAnchor.constraint(equalTo: valueNum0.bottomAnchor, constant: 8)
         ])
 
         stackView4.translatesAutoresizingMaskIntoConstraints = false
@@ -483,19 +521,132 @@ private extension PivotController {
         toolBar.isUserInteractionEnabled = true
         lossTextField.inputAccessoryView = toolBar
         consecutiveTextField.inputAccessoryView = toolBar
+        openTextField.inputAccessoryView = toolBar
+        closeTextField.inputAccessoryView = toolBar
     }
 
     @objc func hideKeyboard() {
         view.endEditing(true)
+        lossTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        consecutiveTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        openTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        closeTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
     }
 }
 
 private extension PivotController {
     @objc func calculate() {
-        //
+        if consecutiveTextField.text != "" && lossTextField.text != "" && openTextField.text != "" && closeTextField.text != "" {
+            stackView1.isHidden = false
+            stackView4.isHidden = false
+            valueNum0.text = "resistance".localize() + " 4"
+
+            let lowPrice = Double(consecutiveTextField.text ?? "0")!
+            let highPrice = Double(lossTextField.text ?? "0")!
+            let closePrice = Double(closeTextField.text ?? "0")!
+            var result = 0.0
+
+            switch segmentFirst.selectedSegmentIndex {
+            case 0:
+                let pp = (highPrice + lowPrice + closePrice) / 3
+                valueEnd1.text = "---"
+                valueEnd9.text = "---"
+                result = highPrice + 2 * (pp - lowPrice)
+                valueEnd2.text = String(format:"%.2f", result)
+                result = pp + (highPrice - lowPrice)
+                valueEnd3.text = String(format:"%.2f", result)
+                result = (2 * pp) - lowPrice
+                valueEnd4.text = String(format:"%.2f", result)
+                valueEnd5.text = String(format:"%.2f", pp)
+                result = (2 * pp) - highPrice
+                valueEnd6.text = String(format:"%.2f", result)
+                result = pp - (highPrice - lowPrice)
+                valueEnd7.text = String(format:"%.2f", result)
+                result = lowPrice - 2 * (highPrice - pp)
+                valueEnd8.text = String(format:"%.2f", result)
+            case 1:
+                valueEnd1.text = "---"
+                valueEnd2.text = "---"
+                valueEnd8.text = "---"
+                valueEnd9.text = "---"
+                result = ((highPrice + lowPrice) + (closePrice * 2)) / 4
+                valueEnd5.text = String(format:"%.2f", result)
+                result = (((highPrice + lowPrice) + (closePrice * 2)) / 2) - lowPrice
+                valueEnd4.text = String(format:"%.2f", result)
+                result = (((highPrice + lowPrice) + (closePrice * 2)) / 4) + highPrice - lowPrice
+                valueEnd3.text = String(format:"%.2f", result)
+                result = (((highPrice + lowPrice) + (closePrice * 2)) / 2) - highPrice
+                valueEnd6.text = String(format:"%.2f", result)
+                result = (((highPrice + lowPrice) + (closePrice * 2)) / 4) - highPrice + lowPrice
+                valueEnd7.text = String(format:"%.2f", result)
+            case 2:
+                valueEnd5.text = "---"
+                result = ((highPrice - lowPrice) * 1.1) / 2 + closePrice
+                valueEnd1.text = String(format:"%.2f", result)
+                result = ((highPrice - lowPrice) * 1.1) / 4 + closePrice
+                valueEnd2.text = String(format:"%.2f", result)
+                result = ((highPrice - lowPrice) * 1.1) / 6 + closePrice
+                valueEnd3.text = String(format:"%.2f", result)
+                result = ((highPrice - lowPrice) * 1.1) / 12 + closePrice
+                valueEnd4.text = String(format:"%.2f", result)
+                result = closePrice - ((highPrice - lowPrice) * 1.1) / 12
+                valueEnd6.text = String(format:"%.2f", result)
+                result = closePrice - ((highPrice - lowPrice) * 1.1) / 6
+                valueEnd7.text = String(format:"%.2f", result)
+                result = closePrice - ((highPrice - lowPrice) * 1.1) / 4
+                valueEnd8.text = String(format:"%.2f", result)
+                result = closePrice - ((highPrice - lowPrice) * 1.1) / 2
+                valueEnd9.text = String(format:"%.2f", result)
+            case 3:
+                valueEnd1.text = "---"
+                valueEnd2.text = "---"
+                valueEnd3.text = "---"
+                valueEnd5.text = "---"
+                valueEnd7.text = "---"
+                valueEnd8.text = "---"
+                valueEnd9.text = "---"
+                result = ((highPrice - lowPrice) / 2) + closePrice
+                valueEnd4.text = String(format:"%.2f", result)
+                result = closePrice - ((highPrice - lowPrice) / 2)
+                valueEnd6.text = String(format:"%.2f", result)
+            default: break
+            }
+        }
     }
 
     @objc func pop() {
         dismiss(animated: false)
+    }
+}
+
+extension PivotController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case consecutiveTextField:
+            consecutiveTextField.layer.borderWidth = 1
+            consecutiveTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            lossTextField.layer.borderWidth = 0
+            closeTextField.layer.borderWidth = 0
+            openTextField.layer.borderWidth = 0
+        case lossTextField:
+            lossTextField.layer.borderWidth = 1
+            lossTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            consecutiveTextField.layer.borderWidth = 0
+            closeTextField.layer.borderWidth = 0
+            openTextField.layer.borderWidth = 0
+        case closeTextField:
+            closeTextField.layer.borderWidth = 1
+            closeTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            consecutiveTextField.layer.borderWidth = 0
+            lossTextField.layer.borderWidth = 0
+            openTextField.layer.borderWidth = 0
+        case openTextField:
+            openTextField.layer.borderWidth = 1
+            openTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            consecutiveTextField.layer.borderWidth = 0
+            lossTextField.layer.borderWidth = 0
+            closeTextField.layer.borderWidth = 0
+        default: break
+        }
     }
 }

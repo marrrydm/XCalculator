@@ -32,7 +32,7 @@ final class DrawController: UIViewController {
     private let startBalanceTitle: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "start.balance.1".localize()
 
@@ -56,7 +56,7 @@ final class DrawController: UIViewController {
     private let consecutiveLabel: UILabel = {
         let view = UILabel()
         view.textColor =  UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "loss.1".localize()
 
@@ -66,7 +66,7 @@ final class DrawController: UIViewController {
     private let lossLabel: UILabel = {
         let view = UILabel()
         view.textColor = UIColor(red: 0.427, green: 0.471, blue: 0.522, alpha: 1)
-        view.font = .systemFont(ofSize: 14, weight: .regular)
+        view.font = .systemFont(ofSize: 13, weight: .regular)
         view.textAlignment = .left
         view.text = "precent.1".localize()
 
@@ -569,6 +569,7 @@ final class DrawController: UIViewController {
         view.alignment = .leading
         view.spacing = 6
         view.isHidden = true
+        view.semanticContentAttribute = .forceLeftToRight
 
         return view
     }()
@@ -580,6 +581,7 @@ final class DrawController: UIViewController {
         view.alignment = .leading
         view.spacing = 6
         view.isHidden = true
+        view.semanticContentAttribute = .forceLeftToRight
 
         return view
     }()
@@ -602,6 +604,7 @@ final class DrawController: UIViewController {
         view.alignment = .leading
         view.spacing = 6
         view.isHidden = true
+        view.semanticContentAttribute = .forceRightToLeft
 
         return view
     }()
@@ -617,10 +620,6 @@ final class DrawController: UIViewController {
 
         return nextButton
     }()
-
-    private var arrayStartBalance = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    private var arrayEndBalance = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    private var arrayTotalLoss = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
     private var viewForCalculate = [[UILabel]]()
 
@@ -851,7 +850,6 @@ private extension DrawController {
     @objc func calculate() {
         // newBalance = startBalance - ((% / 100) * startBalance)
         // totalLoss = (newBalance * (первоначальный %) / startBalance) + (первоначальный %)
-
         if balanceTextField.text != "" && lossTextField.text != "" {
             valueStart1.text = balanceTextField.text
             valueTotal1.text = lossTextField.text ?? "0" + "%"
@@ -890,9 +888,11 @@ extension DrawController: UITextFieldDelegate {
         case balanceTextField:
             balanceTextField.layer.borderWidth = 1
             balanceTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            lossTextField.layer.borderWidth = 0
         case lossTextField:
             lossTextField.layer.borderWidth = 1
             lossTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            balanceTextField.layer.borderWidth = 0
         default: break
         }
     }
