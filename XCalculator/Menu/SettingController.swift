@@ -138,6 +138,7 @@ private extension SettingController {
         ])
     }
 }
+
 private extension SettingController {
     @objc func pop() {
         dismiss(animated: false)

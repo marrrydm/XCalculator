@@ -213,6 +213,12 @@ final class RiskController: UIViewController {
 
         setupUI()
         setupDoneBtn()
+
+        winTextField.delegate = self
+        averageTextField.delegate = self
+        riskTextField.delegate = self
+        numTextField.delegate = self
+        maxTextField.delegate = self
     }
 }
 
@@ -367,15 +373,76 @@ private extension RiskController {
 
     @objc func hideKeyboard() {
         view.endEditing(true)
+        winTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        averageTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        riskTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        numTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
+        maxTextField.layer.borderColor = UIColor(red: 0.227, green: 0.227, blue: 0.239, alpha: 1).cgColor
     }
 }
 
 private extension RiskController {
     @objc func calculate() {
-        //
+        // ((1 – (W – L)) / (1 + (W – L)))U
+        if winTextField.text != "" && averageTextField.text != "" && riskTextField.text != "" && numTextField.text != "" && maxTextField.text != "" {
+            let winPercent = Double(winTextField.text!)! / 100
+            let losePercent = 1 - winPercent
+            let riskValue = Double(riskTextField.text!)! / 100
+            let numValue = Double(numTextField.text!)!
+            let maxValue = Double(maxTextField.text!)! / 100
+
+            let value1 = pow((((1 - (winPercent - losePercent))) / ((1 + (winPercent - losePercent)))), maxValue)
+            let value2 = (maxValue - riskValue) / riskValue * numValue / 100
+
+            riskBalanceValue.text = String(format:"%.2f", value2) + "%"
+            totalValue.text = String(format:"%.2f", value1) + "%"
+        }
     }
 
     @objc func pop() {
         dismiss(animated: false)
+    }
+}
+
+extension RiskController: UITextFieldDelegate {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case winTextField:
+            winTextField.layer.borderWidth = 1
+            winTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            averageTextField.layer.borderWidth = 0
+            riskTextField.layer.borderWidth = 0
+            numTextField.layer.borderWidth = 0
+            maxTextField.layer.borderWidth = 0
+        case averageTextField:
+            averageTextField.layer.borderWidth = 1
+            averageTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            winTextField.layer.borderWidth = 0
+            riskTextField.layer.borderWidth = 0
+            numTextField.layer.borderWidth = 0
+            maxTextField.layer.borderWidth = 0
+        case riskTextField:
+            riskTextField.layer.borderWidth = 1
+            riskTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            winTextField.layer.borderWidth = 0
+            averageTextField.layer.borderWidth = 0
+            numTextField.layer.borderWidth = 0
+            maxTextField.layer.borderWidth = 0
+        case numTextField:
+            numTextField.layer.borderWidth = 1
+            numTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            winTextField.layer.borderWidth = 0
+            averageTextField.layer.borderWidth = 0
+            riskTextField.layer.borderWidth = 0
+            maxTextField.layer.borderWidth = 0
+        case maxTextField:
+            maxTextField.layer.borderWidth = 1
+            maxTextField.layer.borderColor = UIColor(red: 0.392, green: 0.824, blue: 1, alpha: 1).cgColor
+            winTextField.layer.borderWidth = 0
+            averageTextField.layer.borderWidth = 0
+            riskTextField.layer.borderWidth = 0
+            numTextField.layer.borderWidth = 0
+        default: break
+        }
     }
 }
